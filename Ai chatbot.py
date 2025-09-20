@@ -11,10 +11,10 @@ chat = model.start_chat()
 
 
 def insert_text(tag, text):
-    text_area.config(state=tk.NORMAL)   # enable temporarily
+    text_area.config(state=tk.NORMAL)   
     text_area.insert(tk.END, text, tag)
     text_area.see(tk.END)
-    text_area.config(state=tk.DISABLED) # lock again
+    text_area.config(state=tk.DISABLED)
 
 def get_response(user_input):
     if user_input.lower() in ["bye", "quit", "see ya"]:
@@ -84,3 +84,4 @@ root.bind("<Return>", lambda event: send_message())
 
 
 root.mainloop()
+
